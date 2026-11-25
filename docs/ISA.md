@@ -40,7 +40,9 @@ The unique architecture for the CPU.
 * Halt x1
 
 ## Instruction Structure
-* First Word (1 Byte): The Opcode
+* First Word (1 Byte): The Opcode 00000000
+    - First 6 bits are opcodes
+    - Last two bits are used to define number of words taken up by that instruction
 * Following words can either be:
     - Registers 00000000 = loc A, loc B, loc C, unsigned (Each two bits)
     - Addresses (Two words)

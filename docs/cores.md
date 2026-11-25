@@ -15,4 +15,14 @@ Each core conatins the following:
 Efficiency Cores are very straightforward. A simple FDE cycle. One instruction at a time.
 
 ## Power Cores
-Uses pipelining and branch predicition to run multiple instructions.
+Uses pipelining to run multiple instructions.
+### Pipelining 
+The core multitasks each cycle performing multiple operations per cycle. On an effciency core it works a little something like this:
+    -  Cycle 1: Fetch Instruction 1
+    -  Cycle 2: Decode Instruction 1
+    -  Cycle 3: Execute Instruction 1
+However on a power core it looks like this:
+    -  Cycle 1: Fetch Instruction 1
+    -  Cycle 2: Fetch Instruction 2, Decode Instruction 1
+    -  Cycle 3: Fetch Instruction 3, Decode Instruction 2, Execute Instruction 1
+
